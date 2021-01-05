@@ -1,14 +1,14 @@
 <template>
   <div class="game">
     <div class="game__board">
-      <div class="game__box" v-for="(squareValue, position) in squares" :key="position">
-        <span>{{ squareValue }}</span>
-      </div>
+      <Square v-for="(squareValue, position) in squares" :key="position" />
     </div>
   </div>
 </template>
 
 <script>
+import Square from "./Square";
+
 export default {
   data() {
     return {
